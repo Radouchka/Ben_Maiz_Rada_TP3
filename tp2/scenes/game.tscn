@@ -34,13 +34,15 @@ stream = ExtResource("6_kvuet")
 volume_db = 3.962
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(961, 541)
-scale = Vector2(1.29375, 1)
+position = Vector2(963, 541)
+scale = Vector2(1, 1)
 texture = ExtResource("4_gee14")
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="UILayer" instance=ExtResource("4_p57ef")]
+offset_right = 1923.0
+offset_bottom = 1077.0
 
 [node name="GameOverScreen" parent="UILayer" instance=ExtResource("5_u5sy4")]
 visible = false
