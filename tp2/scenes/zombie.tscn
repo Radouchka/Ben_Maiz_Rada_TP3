@@ -1,0 +1,69 @@
+[gd_scene load_steps=12 format=3 uid="uid://8rwdhh8amvjx"]
+
+[ext_resource type="Script" uid="uid://df1m4n787iexf" path="res://scripts/zombie.gd" id="1_xepks"]
+[ext_resource type="Texture2D" uid="uid://dewxs53fvpkg" path="res://assets/images_transparent/Zombie_1_walk1-Recovered copy.png" id="2_4gx57"]
+[ext_resource type="Texture2D" uid="uid://c3jvqihtseism" path="res://assets/images_transparent/Zombie_1_walk2 copy.png" id="3_ycv6i"]
+[ext_resource type="Texture2D" uid="uid://f25dabqj4h54" path="res://assets/images_transparent/Zombie_2_walk1 copy.png" id="4_pjjxt"]
+[ext_resource type="Texture2D" uid="uid://cltq3itg4exda" path="res://assets/images_transparent/Zombie_2_walk2 copy.png" id="5_7pfmu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gx57"]
+atlas = ExtResource("2_4gx57")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycv6i"]
+atlas = ExtResource("3_ycv6i")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fthk"]
+atlas = ExtResource("4_pjjxt")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aetfh"]
+atlas = ExtResource("5_7pfmu")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjjxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gx57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycv6i")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fthk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aetfh")
+}],
+"loop": true,
+"name": &"Zombie_2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xepks"]
+size = Vector2(272, 742.5)
+
+[node name="Zombie" type="Area2D"]
+position = Vector2(533, 28)
+script = ExtResource("1_xepks")
+hp = 3
+speed = -100
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1660, 643)
+sprite_frames = SubResource("SpriteFrames_pjjxt")
+animation = &"Walk"
+autoplay = "Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1635, 663.75)
+shape = SubResource("RectangleShape2D_xepks")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

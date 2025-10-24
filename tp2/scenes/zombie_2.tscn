@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cunboldvy75fe"]
+
+[ext_resource type="PackedScene" uid="uid://8rwdhh8amvjx" path="res://scenes/zombie.tscn" id="1_at2hf"]
+
+[node name="Zombie2" instance=ExtResource("1_at2hf")]
+position = Vector2(245, 3)
+hp = 5
+speed = -200
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(2279, 652)
+animation = &"Zombie_2"
+autoplay = "Zombie_2"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(2254, 672.75)

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://d32rot7t0d7li"]
+
+[ext_resource type="Script" uid="uid://cjsto0w84ngtc" path="res://scripts/game_manager.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://cbbecpwyhecvp" path="res://scripts/game.gd" id="1_p57ef"]
+[ext_resource type="PackedScene" uid="uid://ny8jlx2fnvv" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://db3ef30wtwq5w" path="res://scenes/power_up.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://8rwdhh8amvjx" path="res://scenes/zombie.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://mlmmwkg6nf6i" path="res://scenes/bullet.tscn" id="5_iywne"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_p57ef")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_lbhrr")
+
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(0, -1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(966, 540)
+scale = Vector2(-12.5868, 4.82161)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(970, 1165)
+scale = Vector2(11.1009, 6.07615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.180165, -14.812)
+shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="PowerUp" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(1495, 965)
+
+[node name="Zombie" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(601, -14)
+
+[node name="Bullet" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(0, -1)
+
+[node name="BulletContainer" type="Node2D" parent="."]
+position = Vector2(-228, -307)
