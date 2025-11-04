@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ny8jlx2fnvv"]
+[gd_scene load_steps=15 format=3 uid="uid://ny8jlx2fnvv"]
 
 [ext_resource type="Texture2D" uid="uid://j6dgvjoh5vda" path="res://assets/images_transparent/idle_animationcopy.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cjogbrmvnvaj1" path="res://scripts/player.gd" id="1_g2els"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbxm5lp165iq5" path="res://assets/images_transparent/Jump_animation.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://wixfvqohwcwq" path="res://assets/images_transparent/walk_animation1 copy.png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://dlhyfnvt5l1f7" path="res://assets/images_transparent/Walk_animation2 copy.png" id="5_fjrip"]
+[ext_resource type="AudioStream" uid="uid://dyd1cjpbm6xri" path="res://assets/sons/fighter-269805.mp3" id="7_fjrip"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("3_qlg0r")
@@ -86,3 +87,12 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(244, 322)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(250, 547)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(16, 7)
+stream = ExtResource("7_fjrip")
+volume_db = -6.933
+autoplay = true

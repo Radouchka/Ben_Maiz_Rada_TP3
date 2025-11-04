@@ -57,13 +57,13 @@ hp = 3
 speed = -100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1660, 643)
+position = Vector2(1675, 623)
 sprite_frames = SubResource("SpriteFrames_pjjxt")
 animation = &"Walk"
 autoplay = "Walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1635, 663.75)
+position = Vector2(1685, 659)
 shape = SubResource("RectangleShape2D_xepks")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

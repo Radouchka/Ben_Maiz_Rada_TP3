@@ -8,9 +8,9 @@ hp = 5
 speed = -200
 
 [node name="AnimatedSprite2D" parent="." index="0"]
-position = Vector2(2279, 652)
+position = Vector2(1939, 629)
 animation = &"Zombie_2"
 autoplay = "Zombie_2"
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(2254, 672.75)
+position = Vector2(1958, 694)
