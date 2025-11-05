@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnq8tphg41ial"]
+
+[ext_resource type="Script" uid="uid://b0f4bl3l0xub0" path="res://scripts/loot.gd" id="1_o0pg5"]
+[ext_resource type="Texture2D" uid="uid://v4x0kqcb40xq" path="res://assets/images_transparent/power-up copy.png" id="1_xofgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0pg5"]
+size = Vector2(65, 64)
+
+[node name="Loot" type="Area2D"]
+collision_layer = 16384
+script = ExtResource("1_o0pg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22, 18)
+scale = Vector2(0.220133, 0.215984)
+texture = ExtResource("1_xofgn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(22.5, 22)
+shape = SubResource("RectangleShape2D_o0pg5")
+
+[node name="LootTimer" type="Timer" parent="."]
+wait_time = 10.144
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

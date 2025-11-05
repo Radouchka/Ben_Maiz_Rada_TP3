@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d32rot7t0d7li"]
+[gd_scene load_steps=17 format=3 uid="uid://d32rot7t0d7li"]
 
 [ext_resource type="Script" uid="uid://cjsto0w84ngtc" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="Script" uid="uid://cbbecpwyhecvp" path="res://scripts/game.gd" id="1_p57ef"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dlbd0mpdj48l2" path="res://assets/images_JPEG/niveau_1.jpg" id="7_dinhu"]
 [ext_resource type="Texture2D" uid="uid://0k0wpfxuli18" path="res://assets/images_JPEG/pt2 bro.png" id="8_kvuet"]
 [ext_resource type="AudioStream" uid="uid://dyd1cjpbm6xri" path="res://assets/sons/fighter-269805.mp3" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://2brcnivbh8yi" path="res://scenes/area_exit.tscn" id="14_trtic"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 
@@ -28,6 +29,9 @@ enemy_scenes = Array[PackedScene]([ExtResource("3_lnu2h"), ExtResource("5_iywne"
 position = Vector2(2910, 514)
 scale = Vector2(1.185, 1.17444)
 texture = ExtResource("8_kvuet")
+
+[node name="AreaExit" parent="." instance=ExtResource("14_trtic")]
+position = Vector2(2086, 66)
 
 [node name="SFX" type="Node" parent="."]
 

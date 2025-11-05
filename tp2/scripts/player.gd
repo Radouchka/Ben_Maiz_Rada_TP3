@@ -2,6 +2,7 @@ class_name Player extends CharacterBody2D
 
 signal bullet_shot(bullet_scene, location)
 signal killed
+@onready var collision = $CollisionShape2D
 @onready var muzzle = $Muzzle
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 const SPEED = 300.0
@@ -52,6 +53,14 @@ func _physics_process(delta: float) -> void:
 	
 func shoot():
 	bullet_shot.emit(bullet_scene, muzzle.global_position)
+	
+func use_power_up():
+	var powerUpDuration = 5
+	animated_sprite.play("shot_gun")
+	
+	
+	await get_tree().create_timer(powerUpDuration).timeout
+	animated_sprite.play("idle")
 	
 func die():
 	killed.emit()
