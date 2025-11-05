@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tp2"
-run/main_scene="uid://d32rot7t0d7li"
+run/main_scene="uid://cgs2pm40phaml"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

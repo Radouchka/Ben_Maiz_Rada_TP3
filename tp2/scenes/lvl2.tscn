@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq0cv8atvttxn"]
+[gd_scene load_steps=6 format=3 uid="uid://cq0cv8atvttxn"]
 
 [ext_resource type="PackedScene" uid="uid://d32rot7t0d7li" path="res://scenes/game.tscn" id="1_yxjv1"]
 [ext_resource type="Texture2D" uid="uid://7u3b41cphyky" path="res://assets/images_JPEG/lvl2_deuxieme-moitier.jpg" id="2_o7ycc"]
 [ext_resource type="AudioStream" uid="uid://bj1pvsp1wmuxt" path="res://assets/sons/lvl2.mp3" id="3_jaojv"]
 [ext_resource type="PackedScene" uid="uid://cnq8tphg41ial" path="res://scenes/loot.tscn" id="4_jaojv"]
+[ext_resource type="Texture2D" uid="uid://bhb14rf5ewab7" path="res://assets/images_JPEG/truck_B.png" id="5_3n54i"]
 
 [node name="Game" instance=ExtResource("1_yxjv1")]
 
@@ -13,17 +14,22 @@ scale = Vector2(2.83063, 3.3354)
 texture = ExtResource("2_o7ycc")
 
 [node name="AreaExit" parent="." index="1"]
-position = Vector2(2926, 131)
+position = Vector2(1957, 178)
 
 [node name="Background" parent="." index="3"]
 position = Vector2(-213.4, 321.5)
 scale = Vector2(3.54433, 3.3755)
 texture = ExtResource("2_o7ycc")
 
-[node name="Music" parent="." index="11"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="7"]
+position = Vector2(3002, 426)
+scale = Vector2(1.19167, 1.62963)
+texture = ExtResource("5_3n54i")
+
+[node name="Music" parent="." index="12"]
 stream = ExtResource("3_jaojv")
 volume_db = -6.318
 
-[node name="Loot" parent="." index="12" instance=ExtResource("4_jaojv")]
+[node name="Loot" parent="." index="13" instance=ExtResource("4_jaojv")]
 position = Vector2(385, 800)
 scale = Vector2(4.82, 4.82)

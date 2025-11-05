@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgs2pm40phaml"]
+
+[ext_resource type="Script" uid="uid://bxqyucpl0mo1y" path="res://scripts/menu.gd" id="1_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://bte2yh41hw0u1" path="res://assets/images_JPEG/menu.png" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://bqt162vpp7s0d" path="res://assets/SPANISH APOCALYPSE.otf" id="3_4ytvr"]
+[ext_resource type="AudioStream" uid="uid://cq8u3nnc6bl5p" path="res://assets/sons/necropolis-427762.mp3" id="4_g3eks"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhnvy")
+
+[node name="main_page" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_g3eks")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(965, 537)
+scale = Vector2(1.01927, 1.03426)
+texture = ExtResource("1_yqeox")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0.749776, 0.381783, 0.388329, 1)
+layout_mode = 0
+offset_left = 469.0
+offset_top = 909.0
+offset_right = 978.0
+offset_bottom = 1036.0
+theme_override_font_sizes/font_size = 73
+text = "JOUER"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 170.0
+offset_right = 1017.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 231
+text = "Zombiction"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
