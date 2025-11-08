@@ -1,35 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://cq0cv8atvttxn"]
+[gd_scene load_steps=9 format=3 uid="uid://cq0cv8atvttxn"]
 
 [ext_resource type="PackedScene" uid="uid://d32rot7t0d7li" path="res://scenes/game.tscn" id="1_yxjv1"]
+[ext_resource type="PackedScene" uid="uid://8rwdhh8amvjx" path="res://scenes/zombie.tscn" id="2_g6uqv"]
 [ext_resource type="Texture2D" uid="uid://7u3b41cphyky" path="res://assets/images_JPEG/lvl2_deuxieme-moitier.jpg" id="2_o7ycc"]
+[ext_resource type="PackedScene" uid="uid://cunboldvy75fe" path="res://scenes/zombie_2.tscn" id="3_hnnuc"]
 [ext_resource type="AudioStream" uid="uid://bj1pvsp1wmuxt" path="res://assets/sons/lvl2.mp3" id="3_jaojv"]
+[ext_resource type="PackedScene" uid="uid://bf2yrs6x3wegm" path="res://scenes/zombie_3.tscn" id="4_c8sub"]
 [ext_resource type="PackedScene" uid="uid://cnq8tphg41ial" path="res://scenes/loot.tscn" id="4_jaojv"]
-[ext_resource type="Texture2D" uid="uid://bhb14rf5ewab7" path="res://assets/images_JPEG/truck_B.png" id="5_3n54i"]
+[ext_resource type="PackedScene" uid="uid://chii3wn1sbb4h" path="res://scenes/area_3.tscn" id="5_3n54i"]
 
 [node name="Game" instance=ExtResource("1_yxjv1")]
+enemy_scenes = Array[PackedScene]([ExtResource("2_g6uqv"), ExtResource("3_hnnuc"), ExtResource("4_c8sub")])
 
-[node name="Background2" parent="." index="0"]
-position = Vector2(2702.63, 320.514)
-scale = Vector2(2.83063, 3.3354)
+[node name="Background3" parent="." index="0"]
+visible = false
+
+[node name="Background2" parent="." index="1"]
+position = Vector2(5507, 414)
+scale = Vector2(6.7299, 3.07332)
 texture = ExtResource("2_o7ycc")
 
-[node name="AreaExit" parent="." index="1"]
-position = Vector2(1957, 178)
+[node name="AreaExit" parent="." index="2"]
+position = Vector2(7766, 2503)
 
-[node name="Background" parent="." index="3"]
-position = Vector2(-213.4, 321.5)
-scale = Vector2(3.54433, 3.3755)
+[node name="Background" parent="." index="4"]
+position = Vector2(-467, 407)
+scale = Vector2(3.26183, 3.05221)
 texture = ExtResource("2_o7ycc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="7"]
-position = Vector2(3002, 426)
-scale = Vector2(1.19167, 1.62963)
-texture = ExtResource("5_3n54i")
-
-[node name="Music" parent="." index="12"]
-stream = ExtResource("3_jaojv")
-volume_db = -6.318
+[node name="area_3" parent="." index="8" instance=ExtResource("5_3n54i")]
+position = Vector2(4515, 129)
 
 [node name="Loot" parent="." index="13" instance=ExtResource("4_jaojv")]
 position = Vector2(385, 800)
 scale = Vector2(4.82, 4.82)
+
+[node name="Music" parent="." index="14"]
+stream = ExtResource("3_jaojv")
+volume_db = -6.318

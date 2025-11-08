@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var damage = 1
-const SPEED = 800
+const SPEED = 900
 
 func _physics_process(delta):
 	global_position.x += SPEED * delta

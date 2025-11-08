@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://8rwdhh8amvjx"]
+[gd_scene load_steps=16 format=3 uid="uid://8rwdhh8amvjx"]
 
 [ext_resource type="Script" uid="uid://df1m4n787iexf" path="res://scripts/zombie.gd" id="1_xepks"]
 [ext_resource type="Texture2D" uid="uid://dewxs53fvpkg" path="res://assets/images_transparent/Zombie_1_walk1-Recovered copy.png" id="2_4gx57"]
 [ext_resource type="Texture2D" uid="uid://c3jvqihtseism" path="res://assets/images_transparent/Zombie_1_walk2 copy.png" id="3_ycv6i"]
 [ext_resource type="Texture2D" uid="uid://f25dabqj4h54" path="res://assets/images_transparent/Zombie_2_walk1 copy.png" id="4_pjjxt"]
 [ext_resource type="Texture2D" uid="uid://cltq3itg4exda" path="res://assets/images_transparent/Zombie_2_walk2 copy.png" id="5_7pfmu"]
+[ext_resource type="Texture2D" uid="uid://cwwutfaf734n5" path="res://assets/images_transparent/Zombie_3_walk2.png" id="7_3fthk"]
+[ext_resource type="Texture2D" uid="uid://dn0535p1xjn35" path="res://assets/images_transparent/Zombie_3_walk3.png" id="7_7pfmu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4gx57"]
 atlas = ExtResource("2_4gx57")
@@ -20,6 +22,14 @@ region = Rect2(0, 0, 600, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aetfh"]
 atlas = ExtResource("5_7pfmu")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iblsu"]
+atlas = ExtResource("7_3fthk")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjlcg"]
+atlas = ExtResource("7_7pfmu")
 region = Rect2(0, 0, 600, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pjjxt"]
@@ -45,25 +55,37 @@ animations = [{
 "loop": true,
 "name": &"Zombie_2",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iblsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjlcg")
+}],
+"loop": true,
+"name": &"Zombie_3",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xepks"]
-size = Vector2(272, 742.5)
+size = Vector2(159, 729.25)
 
 [node name="Zombie" type="Area2D"]
-position = Vector2(533, 28)
+position = Vector2(841, 18)
 script = ExtResource("1_xepks")
 hp = 3
-speed = -100
+speed = -300
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1675, 623)
+position = Vector2(4360, 622)
 sprite_frames = SubResource("SpriteFrames_pjjxt")
-animation = &"Walk"
+animation = &"Zombie_3"
 autoplay = "Walk"
+frame_progress = 0.221367
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1685, 659)
+position = Vector2(4363, 708)
 shape = SubResource("RectangleShape2D_xepks")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

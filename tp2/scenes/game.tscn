@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d32rot7t0d7li"]
+[gd_scene load_steps=16 format=3 uid="uid://d32rot7t0d7li"]
 
 [ext_resource type="Script" uid="uid://cjsto0w84ngtc" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="Script" uid="uid://cbbecpwyhecvp" path="res://scripts/game.gd" id="1_p57ef"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bmoisodpieg6w" path="res://scenes/game_over_screen.tscn" id="5_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://bj06vsq37ggvu" path="res://assets/sons/Zombie_die.mp3" id="6_kvuet"]
 [ext_resource type="Texture2D" uid="uid://dlbd0mpdj48l2" path="res://assets/images_JPEG/niveau_1.jpg" id="7_dinhu"]
-[ext_resource type="Texture2D" uid="uid://0k0wpfxuli18" path="res://assets/images_JPEG/pt2 bro.png" id="8_kvuet"]
 [ext_resource type="AudioStream" uid="uid://dyd1cjpbm6xri" path="res://assets/sons/fighter-269805.mp3" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://2brcnivbh8yi" path="res://scenes/area_exit.tscn" id="14_trtic"]
 
@@ -25,13 +24,18 @@ distance = 151.577
 script = ExtResource("1_p57ef")
 enemy_scenes = Array[PackedScene]([ExtResource("3_lnu2h"), ExtResource("5_iywne")])
 
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(4412, 542)
+scale = Vector2(5.68791, 1.83808)
+texture = ExtResource("7_dinhu")
+
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(2910, 514)
-scale = Vector2(1.185, 1.17444)
-texture = ExtResource("8_kvuet")
+position = Vector2(105, 520)
+scale = Vector2(3.44387, 1.83808)
+texture = ExtResource("7_dinhu")
 
 [node name="AreaExit" parent="." instance=ExtResource("14_trtic")]
-position = Vector2(2086, 66)
+position = Vector2(4847, 89)
 
 [node name="SFX" type="Node" parent="."]
 

@@ -6,7 +6,7 @@ signal killed
 @onready var muzzle = $Muzzle
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
 var bullet_scene = preload("res://scenes/bullet.tscn")
 
 func _process(delta: float) -> void:

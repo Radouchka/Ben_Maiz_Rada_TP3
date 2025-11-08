@@ -1,20 +1,20 @@
 [gd_scene load_steps=18 format=3 uid="uid://ny8jlx2fnvv"]
 
-[ext_resource type="Texture2D" uid="uid://j6dgvjoh5vda" path="res://assets/images_transparent/idle_animationcopy.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cjogbrmvnvaj1" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://kxcq50ysy7tw" path="res://assets/images_transparent/attack_animation1 copy.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bwmdgrmqurum3" path="res://assets/images_transparent/attack_animation1 copy cleaned.png" id="2_smehm"]
+[ext_resource type="Texture2D" uid="uid://cnomdjxxd6dmf" path="res://assets/images_transparent/idle_animationcopy cleaned.png" id="3_smehm"]
 [ext_resource type="Texture2D" uid="uid://dbxm5lp165iq5" path="res://assets/images_transparent/Jump_animation.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://wixfvqohwcwq" path="res://assets/images_transparent/walk_animation1 copy.png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://dlhyfnvt5l1f7" path="res://assets/images_transparent/Walk_animation2 copy.png" id="5_fjrip"]
 [ext_resource type="Texture2D" uid="uid://bvqqcysex1mvn" path="res://assets/images_transparent/shotgun_idle copy.png" id="7_smehm"]
 [ext_resource type="Texture2D" uid="uid://db0fyi73w5xpo" path="res://assets/images_transparent/shotgun_shoot copy.png" id="8_ur7pv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
-atlas = ExtResource("3_qlg0r")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("2_smehm")
 region = Rect2(0, 0, 600, 900)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
-atlas = ExtResource("1_3vyb7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
+atlas = ExtResource("3_smehm")
 region = Rect2(0, 0, 600, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
@@ -41,7 +41,7 @@ region = Rect2(0, 0, 600, 900)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_smehm")
+"texture": SubResource("AtlasTexture_jej6c")
 }],
 "loop": true,
 "name": &"Shoot",
@@ -49,7 +49,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g2els")
+"texture": SubResource("AtlasTexture_f1ej7")
 }],
 "loop": true,
 "name": &"idle",
@@ -101,7 +101,7 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(304, 629)
 sprite_frames = SubResource("SpriteFrames_qhqgy")
-animation = &"pow"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
