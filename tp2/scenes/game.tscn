@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://d32rot7t0d7li"]
+[gd_scene load_steps=17 format=3 uid="uid://d32rot7t0d7li"]
 
 [ext_resource type="Script" uid="uid://cjsto0w84ngtc" path="res://scripts/game_manager.gd" id="1_lbhrr"]
 [ext_resource type="Script" uid="uid://cbbecpwyhecvp" path="res://scripts/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://ny8jlx2fnvv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://8rwdhh8amvjx" path="res://scenes/zombie.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bqe26upgcsi57" path="res://hud.tscn" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://d244jhg1b4j87" path="res://assets/images_JPEG/niveau_1_2.png" id="4_trtic"]
 [ext_resource type="AudioStream" uid="uid://bctvoixf67ak5" path="res://assets/sons/pistol_shot.mp3" id="4_vtaks"]
 [ext_resource type="AudioStream" uid="uid://bqhd1oywh2dk2" path="res://assets/sons/pixel-explosion-319166.mp3" id="5_dinhu"]
 [ext_resource type="PackedScene" uid="uid://cunboldvy75fe" path="res://scenes/zombie_2.tscn" id="5_iywne"]
@@ -24,18 +25,18 @@ distance = 151.577
 script = ExtResource("1_p57ef")
 enemy_scenes = Array[PackedScene]([ExtResource("3_lnu2h"), ExtResource("5_iywne")])
 
-[node name="Background3" type="Sprite2D" parent="."]
-position = Vector2(4412, 542)
-scale = Vector2(5.68791, 1.83808)
-texture = ExtResource("7_dinhu")
-
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(105, 520)
+position = Vector2(3972, 521)
 scale = Vector2(3.44387, 1.83808)
-texture = ExtResource("7_dinhu")
+texture = ExtResource("4_trtic")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(4513, 521)
+scale = Vector2(4.31522, 1.83452)
+texture = ExtResource("4_trtic")
 
 [node name="AreaExit" parent="." instance=ExtResource("14_trtic")]
-position = Vector2(4847, 89)
+position = Vector2(3615, 69)
 
 [node name="SFX" type="Node" parent="."]
 

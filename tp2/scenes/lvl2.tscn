@@ -1,32 +1,33 @@
-[gd_scene load_steps=9 format=3 uid="uid://cq0cv8atvttxn"]
+[gd_scene load_steps=10 format=3 uid="uid://cq0cv8atvttxn"]
 
 [ext_resource type="PackedScene" uid="uid://d32rot7t0d7li" path="res://scenes/game.tscn" id="1_yxjv1"]
 [ext_resource type="PackedScene" uid="uid://8rwdhh8amvjx" path="res://scenes/zombie.tscn" id="2_g6uqv"]
-[ext_resource type="Texture2D" uid="uid://7u3b41cphyky" path="res://assets/images_JPEG/lvl2_deuxieme-moitier.jpg" id="2_o7ycc"]
 [ext_resource type="PackedScene" uid="uid://cunboldvy75fe" path="res://scenes/zombie_2.tscn" id="3_hnnuc"]
 [ext_resource type="AudioStream" uid="uid://bj1pvsp1wmuxt" path="res://assets/sons/lvl2.mp3" id="3_jaojv"]
 [ext_resource type="PackedScene" uid="uid://bf2yrs6x3wegm" path="res://scenes/zombie_3.tscn" id="4_c8sub"]
 [ext_resource type="PackedScene" uid="uid://cnq8tphg41ial" path="res://scenes/loot.tscn" id="4_jaojv"]
 [ext_resource type="PackedScene" uid="uid://chii3wn1sbb4h" path="res://scenes/area_3.tscn" id="5_3n54i"]
+[ext_resource type="Texture2D" uid="uid://kphjp18eaqgx" path="res://assets/images_JPEG/bg.png" id="5_hnnuc"]
+[ext_resource type="Texture2D" uid="uid://dprahndcqh61h" path="res://assets/images_JPEG/e7abb1b0e553ae2aecd58dc39ae4aaec.jpg" id="6_c8sub"]
 
 [node name="Game" instance=ExtResource("1_yxjv1")]
 enemy_scenes = Array[PackedScene]([ExtResource("2_g6uqv"), ExtResource("3_hnnuc"), ExtResource("4_c8sub")])
 
-[node name="Background3" parent="." index="0"]
-visible = false
+[node name="Background2" parent="." index="0"]
+position = Vector2(4158, 559)
+scale = Vector2(4.46347, 2.68499)
+texture = ExtResource("5_hnnuc")
 
-[node name="Background2" parent="." index="1"]
-position = Vector2(5507, 414)
-scale = Vector2(6.7299, 3.07332)
-texture = ExtResource("2_o7ycc")
+[node name="Background3" parent="." index="1"]
+visible = false
 
 [node name="AreaExit" parent="." index="2"]
 position = Vector2(7766, 2503)
 
 [node name="Background" parent="." index="4"]
-position = Vector2(-467, 407)
-scale = Vector2(3.26183, 3.05221)
-texture = ExtResource("2_o7ycc")
+position = Vector2(-467, 558.205)
+scale = Vector2(3.26183, 2.67467)
+texture = ExtResource("6_c8sub")
 
 [node name="area_3" parent="." index="8" instance=ExtResource("5_3n54i")]
 position = Vector2(4515, 129)

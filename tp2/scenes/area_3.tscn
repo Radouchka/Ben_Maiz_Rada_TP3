@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://chii3wn1sbb4h"]
 
-[ext_resource type="Texture2D" uid="uid://bhb14rf5ewab7" path="res://assets/images_JPEG/truck_B.png" id="1_1a5lv"]
 [ext_resource type="Script" uid="uid://eoixvpa687qv" path="res://scripts/area_3.gd" id="1_h13uh"]
+[ext_resource type="Texture2D" uid="uid://b42lq2lyjcihr" path="res://assets/images_JPEG/the_truck.png" id="2_h13uh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h13uh"]
 size = Vector2(574, 566)
@@ -13,7 +13,7 @@ script = ExtResource("1_h13uh")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1357.5, 257)
 scale = Vector2(1.40677, 1.52963)
-texture = ExtResource("1_1a5lv")
+texture = ExtResource("2_h13uh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(504, 522)

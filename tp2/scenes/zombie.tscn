@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://8rwdhh8amvjx"]
+[gd_scene load_steps=20 format=3 uid="uid://8rwdhh8amvjx"]
 
 [ext_resource type="Script" uid="uid://df1m4n787iexf" path="res://scripts/zombie.gd" id="1_xepks"]
 [ext_resource type="Texture2D" uid="uid://dewxs53fvpkg" path="res://assets/images_transparent/Zombie_1_walk1-Recovered copy.png" id="2_4gx57"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cltq3itg4exda" path="res://assets/images_transparent/Zombie_2_walk2 copy.png" id="5_7pfmu"]
 [ext_resource type="Texture2D" uid="uid://cwwutfaf734n5" path="res://assets/images_transparent/Zombie_3_walk2.png" id="7_3fthk"]
 [ext_resource type="Texture2D" uid="uid://dn0535p1xjn35" path="res://assets/images_transparent/Zombie_3_walk3.png" id="7_7pfmu"]
+[ext_resource type="Texture2D" uid="uid://b3dpo2bdkl7tu" path="res://assets/images_transparent/Zombie_4_walk_1.png" id="8_aetfh"]
+[ext_resource type="Texture2D" uid="uid://bn3wc16eg3xob" path="res://assets/images_transparent/Zombie_4_walk_2.png" id="9_jjlcg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4gx57"]
 atlas = ExtResource("2_4gx57")
@@ -30,6 +32,14 @@ region = Rect2(0, 0, 600, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jjlcg"]
 atlas = ExtResource("7_7pfmu")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ida1p"]
+atlas = ExtResource("8_aetfh")
+region = Rect2(0, 0, 600, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6hpf"]
+atlas = ExtResource("9_jjlcg")
 region = Rect2(0, 0, 600, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pjjxt"]
@@ -66,6 +76,17 @@ animations = [{
 "loop": true,
 "name": &"Zombie_3",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ida1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6hpf")
+}],
+"loop": true,
+"name": &"Zombie_4",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xepks"]
@@ -80,9 +101,8 @@ speed = -300
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4360, 622)
 sprite_frames = SubResource("SpriteFrames_pjjxt")
-animation = &"Zombie_3"
+animation = &"Walk"
 autoplay = "Walk"
-frame_progress = 0.221367
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4363, 708)
