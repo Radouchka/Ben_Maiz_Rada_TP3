@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bxqyucpl0mo1y" path="res://scripts/menu.gd" id="1_mhnvy"]
 [ext_resource type="Texture2D" uid="uid://bte2yh41hw0u1" path="res://assets/images_JPEG/menu.png" id="1_yqeox"]
-[ext_resource type="FontFile" uid="uid://bqt162vpp7s0d" path="res://assets/SPANISH APOCALYPSE.otf" id="3_4ytvr"]
+[ext_resource type="FontFile" uid="uid://bqt162vpp7s0d" path="res://assets/Autre/SPANISH APOCALYPSE.otf" id="3_4ytvr"]
 [ext_resource type="AudioStream" uid="uid://cq8u3nnc6bl5p" path="res://assets/sons/necropolis-427762.mp3" id="4_g3eks"]
 
 [node name="Menu" type="Control"]
