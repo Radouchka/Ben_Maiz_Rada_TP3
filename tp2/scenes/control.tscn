@@ -23,10 +23,10 @@ autoplay = true
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 0.545098, 0.360784, 1)
 layout_mode = 0
-offset_left = 830.0
-offset_top = 810.0
-offset_right = 1188.0
-offset_bottom = 904.0
+offset_left = 803.0
+offset_top = 167.0
+offset_right = 1161.0
+offset_bottom = 261.0
 theme_override_font_sizes/font_size = 51
 text = "MENU"
 

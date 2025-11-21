@@ -31,8 +31,8 @@ scale = Vector2(3.44387, 1.83808)
 texture = ExtResource("4_trtic")
 
 [node name="Background3" type="Sprite2D" parent="."]
-position = Vector2(4513, 521)
-scale = Vector2(4.31522, 1.83452)
+position = Vector2(4497, 497)
+scale = Vector2(4.31522, 1.91131)
 texture = ExtResource("4_trtic")
 
 [node name="AreaExit" parent="." instance=ExtResource("14_trtic")]
@@ -53,8 +53,8 @@ stream = ExtResource("6_kvuet")
 volume_db = 3.962
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-107, 521)
-scale = Vector2(3.367, 1.845)
+position = Vector2(-107, 497.96)
+scale = Vector2(3.367, 1.91357)
 texture = ExtResource("7_dinhu")
 
 [node name="UILayer" type="CanvasLayer" parent="."]
@@ -82,7 +82,7 @@ position = Vector2(970, 1165)
 scale = Vector2(11.1009, 6.07615)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.180165, -14.812)
+position = Vector2(-0.900828, -18.7619)
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]

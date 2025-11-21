@@ -35,6 +35,9 @@ texture = ExtResource("8_jv667")
 [node name="area_3" parent="." index="8"]
 position = Vector2(7538, 258)
 
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0.180165, -14.812)
+
 [node name="Loot" parent="." index="13"]
 position = Vector2(-1361, 796)
 

@@ -26,19 +26,19 @@ texture = ExtResource("1_yqeox")
 [node name="Button" type="Button" parent="."]
 modulate = Color(0.749776, 0.381783, 0.388329, 1)
 layout_mode = 0
-offset_left = 492.0
-offset_top = 837.0
-offset_right = 887.0
-offset_bottom = 946.0
-theme_override_font_sizes/font_size = 73
+offset_left = 334.0
+offset_top = 338.0
+offset_right = 669.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 62
 text = "JOUER"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 170.0
-offset_right = 1017.0
-offset_bottom = 412.0
+offset_left = 60.0
+offset_top = 92.0
+offset_right = 1013.0
+offset_bottom = 334.0
 theme_override_fonts/font = ExtResource("3_4ytvr")
 theme_override_font_sizes/font_size = 231
 text = "Zombiction"
@@ -46,10 +46,10 @@ text = "Zombiction"
 [node name="Button2" type="Button" parent="."]
 modulate = Color(0.482353, 0.317647, 0.211765, 1)
 layout_mode = 0
-offset_left = 505.0
-offset_top = 980.0
-offset_right = 875.0
-offset_bottom = 1058.0
+offset_left = 317.0
+offset_top = 450.0
+offset_right = 687.0
+offset_bottom = 541.0
 theme_override_font_sizes/font_size = 51
 text = "HOW TO PLAY"
 
