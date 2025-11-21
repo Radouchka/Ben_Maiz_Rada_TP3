@@ -10,3 +10,4 @@ Voici ce qui a changer :
 - navigation dans l'environnement
 - glitch par rapport au images fixed
 - Amélioration du "game over"
+![Alt Text](chiikawa_nerd.jpg)
