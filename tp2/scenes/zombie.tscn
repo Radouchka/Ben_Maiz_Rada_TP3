@@ -95,7 +95,7 @@ size = Vector2(159, 729.25)
 [node name="Zombie" type="Area2D"]
 position = Vector2(841, 18)
 script = ExtResource("1_xepks")
-hp = 3
+hp = 2
 speed = -300
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

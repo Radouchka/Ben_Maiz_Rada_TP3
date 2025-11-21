@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cunboldvy75fe" path="res://scenes/zombie_2.tscn" id="1_ayswh"]
 
 [node name="Zombie3" instance=ExtResource("1_ayswh")]
-hp = 3
+hp = 4
 speed = -350
 
 [node name="AnimatedSprite2D" parent="." index="0"]

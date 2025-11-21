@@ -1,38 +1,47 @@
-[gd_scene load_steps=9 format=3 uid="uid://3abetbfup3i3"]
+[gd_scene load_steps=11 format=3 uid="uid://3abetbfup3i3"]
 
 [ext_resource type="PackedScene" uid="uid://cq0cv8atvttxn" path="res://scenes/lvl2.tscn" id="1_cndm8"]
 [ext_resource type="PackedScene" uid="uid://8rwdhh8amvjx" path="res://scenes/zombie.tscn" id="2_kya1d"]
 [ext_resource type="Texture2D" uid="uid://bpfb5nqeek78a" path="res://assets/images_JPEG/airbase_3.png" id="2_qe4d8"]
 [ext_resource type="PackedScene" uid="uid://cunboldvy75fe" path="res://scenes/zombie_2.tscn" id="3_7oyxs"]
-[ext_resource type="Texture2D" uid="uid://daihwahcq8cuv" path="res://assets/images_JPEG/JEN AI MARRE.png" id="3_br341"]
-[ext_resource type="Texture2D" uid="uid://dbywycvj7lq0v" path="res://assets/images_JPEG/airbase_1.jpg" id="3_qe4d8"]
 [ext_resource type="PackedScene" uid="uid://bf2yrs6x3wegm" path="res://scenes/zombie_3.tscn" id="4_3nxqo"]
 [ext_resource type="PackedScene" uid="uid://2m3jf6n4p0eo" path="res://scenes/zombie_4.tscn" id="5_7oyxs"]
+[ext_resource type="Texture2D" uid="uid://br8gmqf3roojc" path="res://assets/images_JPEG/7f2de8e2-d137-4c11-8d9f-eadc05da304d.jpg" id="6_ot76e"]
+[ext_resource type="Texture2D" uid="uid://cxw48snif2a8h" path="res://assets/images_JPEG/lvl2_fr.jpg" id="8_jv667"]
+[ext_resource type="Texture2D" uid="uid://dvsn52g5m8fun" path="res://assets/images_JPEG/THE_pilar.png" id="9_51xc3"]
+[ext_resource type="AudioStream" uid="uid://dli2ojeuvs5jp" path="res://assets/sons/avexx-search-amp-destroy-115281.mp3" id="10_61ib0"]
 
 [node name="Game" instance=ExtResource("1_cndm8")]
 enemy_scenes = Array[PackedScene]([ExtResource("2_kya1d"), ExtResource("3_7oyxs"), ExtResource("4_3nxqo"), ExtResource("5_7oyxs")])
 
-[node name="Background3" parent="." index="0"]
-visible = true
+[node name="Background2" parent="." index="0"]
+position = Vector2(34, 502)
+scale = Vector2(5.04902, 2.98598)
+texture = ExtResource("6_ot76e")
+
+[node name="Background3" parent="." index="1"]
 position = Vector2(1043, 300)
 scale = Vector2(5.68791, 1.83808)
 texture = ExtResource("2_qe4d8")
-
-[node name="Background2" parent="." index="1"]
-position = Vector2(3938, 578)
-scale = Vector2(1.97549, 0.874089)
-texture = ExtResource("3_br341")
 
 [node name="AreaExit" parent="." index="2"]
 position = Vector2(11776, -1728)
 
 [node name="Background" parent="." index="4"]
-position = Vector2(-707.5, 309.5)
-scale = Vector2(4.9675, 2.39768)
-texture = ExtResource("3_qe4d8")
+position = Vector2(3378, 504)
+scale = Vector2(3.09157, 2.25079)
+texture = ExtResource("8_jv667")
 
 [node name="area_3" parent="." index="8"]
 position = Vector2(7538, 258)
 
 [node name="Loot" parent="." index="13"]
 position = Vector2(-1361, 796)
+
+[node name="pilar" type="Sprite2D" parent="." index="14"]
+position = Vector2(1771, 596)
+scale = Vector2(1.38495, 1.15083)
+texture = ExtResource("9_51xc3")
+
+[node name="Music" parent="." index="15"]
+stream = ExtResource("10_61ib0")

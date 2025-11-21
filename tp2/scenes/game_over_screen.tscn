@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cnd42tm6pnrr7" path="res://scripts/game_over_screen.gd" id="1_iwahs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vnjk"]
-bg_color = Color(0.290196, 0.0470588, 0, 1)
+bg_color = Color(0.218384, 0.273861, 0.156974, 1)
 border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 75
 corner_radius_top_right = 75
