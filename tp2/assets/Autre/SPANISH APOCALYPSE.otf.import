@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bqt162vpp7s0d"
-path="res://.godot/imported/SPANISH APOCALYPSE.otf-72500c597fe500703634aafb48bbfbe6.fontdata"
+path="res://.godot/imported/SPANISH APOCALYPSE.otf-50570ad94119eea4b0aa033bc3d80f77.fontdata"
 
 [deps]
 
-source_file="res://assets/SPANISH APOCALYPSE.otf"
-dest_files=["res://.godot/imported/SPANISH APOCALYPSE.otf-72500c597fe500703634aafb48bbfbe6.fontdata"]
+source_file="res://assets/Autre/SPANISH APOCALYPSE.otf"
+dest_files=["res://.godot/imported/SPANISH APOCALYPSE.otf-50570ad94119eea4b0aa033bc3d80f77.fontdata"]
 
 [params]
 
