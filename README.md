@@ -10,4 +10,5 @@ Voici ce qui a changer :
 - navigation dans l'environnement
 - glitch par rapport au images fixed
 - Amélioration du "game over"
-![Alt Text](chiikawa_nerd.jpg)
+![Alt Text]![chiikawa_nerd](https://github.com/user-attachments/assets/25be44ab-8035-4977-a172-b1a2d0228a61)
+()
